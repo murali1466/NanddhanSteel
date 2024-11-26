@@ -1,10 +1,16 @@
-import React from "react";
+import Home from "./Pages/Home"
+import Company from "./Pages/Company"
+import Gallery from "./Pages/Gallery"
+import Contact from "./Pages/Contact"
 
 function App() {
     return(
-        <div className="bg-red-500 font-[poppins]">
-            App
-        </div>
+        <>
+            <Home />
+            <Company />
+            <Gallery />
+            <Contact />
+        </>
     );
 }
 
