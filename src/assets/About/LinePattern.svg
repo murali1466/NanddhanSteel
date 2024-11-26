@@ -1,0 +1,21 @@
+<svg width="391" height="391" viewBox="0 0 391 391" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_18_485" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="391" height="391">
+<rect y="145.896" width="391" height="11.6716" rx="2" fill="#1E4B8C"/>
+<rect y="175.075" width="391" height="11.6716" rx="2" fill="#1E4B8C"/>
+<rect width="391" height="11.6716" rx="2" fill="#1E4B8C"/>
+<rect y="29.1791" width="391" height="11.6716" rx="2" fill="#1E4B8C"/>
+<rect y="58.3582" width="391" height="11.6716" rx="2" fill="#1E4B8C"/>
+<rect y="87.5373" width="391" height="11.6716" rx="2" fill="#1E4B8C"/>
+<rect y="116.716" width="391" height="11.6716" rx="2" fill="#1E4B8C"/>
+<rect y="350.149" width="391" height="11.6716" rx="2" fill="#1E4B8C"/>
+<rect y="379.328" width="391" height="11.6716" rx="2" fill="#1E4B8C"/>
+<rect y="204.254" width="391" height="11.6716" rx="2" fill="#1E4B8C"/>
+<rect y="233.433" width="391" height="11.6716" rx="2" fill="#1E4B8C"/>
+<rect y="262.612" width="391" height="11.6716" rx="2" fill="#1E4B8C"/>
+<rect y="291.791" width="391" height="11.6716" rx="2" fill="#1E4B8C"/>
+<rect y="320.97" width="391" height="11.6716" rx="2" fill="#1E4B8C"/>
+</mask>
+<g mask="url(#mask0_18_485)">
+<ellipse cx="195.5" cy="201.336" rx="195.5" ry="201.336" fill="#1E4B8C"/>
+</g>
+</svg>
