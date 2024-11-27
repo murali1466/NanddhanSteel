@@ -6,7 +6,7 @@ import App from './App.jsx'
 import NavBar from "./Components/NavBar.jsx"
 import Footer from "./Components/Footer.jsx"
 import Products from "./Pages/ProductsPage.jsx"
-import Services from "./Pages/Sevices.jsx"
+import Applications from "./Pages/Applications.jsx"
 
 
 const Structure=()=>{
@@ -33,8 +33,8 @@ const router=createBrowserRouter([
         element:<Products />
       },
       {
-        path:"/services",
-        element:<Services />
+        path:"/applications",
+        element:<Applications />
       }
     ]
   }

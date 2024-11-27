@@ -12,7 +12,7 @@ function Company() {
     const aboutSection = useRef(null);
 
     useEffect(() => {
-        if (location.hash === "#about" && aboutSection.current) {
+        if (location.hash === "#about  " && aboutSection.current) {
             aboutSection.current.scrollIntoView({ behavior: "smooth" });
             // console.log(aboutSection.current)
         }
@@ -33,7 +33,7 @@ function Company() {
                         <p className="uppercase text-2xl sm:text-3xl lg:text-4xl font-[Nunito] font-extrabold text-[#1e4b8c] text-center md:text-left">About Us</p>
                         <div className="w-36 md:w-56 lg:w-60 bg-[#c0212e] h-[0.20rem] rounded-lg"></div>
                         <p className="my-5">
-                            At <span className="uppercase font-bold text-xl text-[#c0212e]">NANDDHAN STEEL</span>, we pride ourselves on delivering high-quality roofing solutions using the latest technology and top-grade materials. 
+                            At <span className="uppercase font-bold text-xl text-[#c0212e]">NANDDHAN STEEL</span>, an <span className="uppercase font-bold text-xl text-[#1e4b8c]">ISO 9001:2008</span> Certified Organization. We pride ourselves on delivering high-quality roofing solutions using the latest technology and top-grade materials. 
                             With a dynamic team of experienced professionals, we provide durable, leak-proof, and visually appealing products that cater to diverse industries. 
                             Our commitment to quality and innovation ensures we meet the evolving needs of our customers.
                         </p>
