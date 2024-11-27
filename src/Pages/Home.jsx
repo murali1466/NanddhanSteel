@@ -24,7 +24,7 @@ function Home() {
             ref={homeSection}
             className="w-full pt-20 md:pt-24 px-5 sm:px-7 md:px-10 font-[Poppins] flex items-center justify-end overflow-hidden"
             style={{
-                background: `linear-gradient(to left, rgba(0,0,0, 0.9), rgba(0,0,0, 0.7)), url(${Bg})`,
+                background: `linear-gradient(to left, rgba(0,0,0, 0.8), rgba(0,0,0, 0.3)), url(${Bg})`,
                 backgroundAttachment: "fixed",
                 backgroundPosition: "center",
                 backgroundSize: "cover",
@@ -32,7 +32,7 @@ function Home() {
         >
             <div className="flex items-center md:items-end justify-center flex-col py-20 md:py-32">
                 <p data-aos="fade-left" className="font-black font-[Nunito] md:w-[30rem] lg:w-[45rem] text-center md:text-right text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white">
-                    NANDDHAN STEEL ROOFING INDUSTRIES
+                    <span className="text-[#ff1313]">NANDDHAN STEEL</span><br /><span className="text-[#1e4b8c]">ROOFING INDUSTRIES</span>
                 </p>
                 <p data-aos="fade-left" className="italic text-white font-extralight">
                     Discover the Quality . . .

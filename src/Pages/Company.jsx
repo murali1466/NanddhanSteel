@@ -1,6 +1,7 @@
 import { useRef, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import About from "../assets/About/Image1.jpg";
+import Why from "../assets/Gallery/Image2.jpg";
 import LinePattern from "../assets/About/LinePattern.svg";
 import DotPattern from "../assets/About/DotGrid.svg";
 import AOS from "aos";
@@ -47,24 +48,24 @@ function Company() {
                 <div className="flex items-center justify-center flex-col-reverse md:flex-row-reverse gap-5 md:gap-10">
                     <div className=" flex items-center md:items-start justify-center gap-3 flex-col relative">
                         <div data-aos="fade-right" className="relative z-[2] flex items-center justify-start flex-row bg-[#1e4b8c] w-[90vw] sm:w-auto sm:gap-2 rounded-3xl p-1 text-white">
-                            <div className="w-10 h-10 flex items-center justify-center rounded-3xl bg-[#cc2020]"><p className="w-10 text-center">1</p></div>
+                            <div className="w-10 h-10 font-semibold flex items-center justify-center rounded-3xl bg-[#cc2020]"><p className="w-10 text-center">1</p></div>
                             <p className="px-5 text-sm">ISO 9001:2008 Certified</p>
                         </div>
                         <div data-aos="fade-right" className="relative z-[2] flex items-center justify-start flex-row bg-[#1e4b8c] w-[90vw] sm:w-auto sm:gap-2 rounded-3xl p-1 text-white">
-                            <div className="w-10 h-10 flex items-center justify-center rounded-3xl bg-[#cc2020]"><p className="w-10 text-center">2</p></div>
+                            <div className="w-10 h-10 font-semibold flex items-center justify-center rounded-3xl bg-[#cc2020]"><p className="w-10 text-center">2</p></div>
                             <p className="px-5 text-sm">Aesthetic designs that enhance your building's value</p>
                         </div>
                         <div data-aos="fade-right" className="relative z-[2] flex items-center justify-start flex-row bg-[#1e4b8c] w-[90vw] sm:w-auto sm:gap-2 rounded-3xl p-1 text-white">
-                            <div className="w-10 h-10 flex items-center justify-center rounded-3xl bg-[#cc2020]"><p className="w-10 text-center">3</p></div>
+                            <div className="w-10 h-10 font-semibold flex items-center justify-center rounded-3xl bg-[#cc2020]"><p className="w-10 text-center">3</p></div>
                             <p className="px-5 text-sm">High precision quality and durability</p>
                         </div>
                         <div data-aos="fade-right" className="relative z-[2] flex items-center justify-start flex-row bg-[#1e4b8c] w-[90vw] sm:w-auto sm:gap-2 rounded-3xl p-1 text-white">
-                            <div className="w-10 h-10 flex items-center justify-center rounded-3xl bg-[#cc2020]"><p className="w-10 text-center">4</p></div>
+                            <div className="w-10 h-10 font-semibold flex items-center justify-center rounded-3xl bg-[#cc2020]"><p className="w-10 text-center">4</p></div>
                             <p className="px-5 text-sm">Environmentally friendly and cost-effective solutions</p>
                         </div>
                         <img src={DotPattern} alt="Dots pattern"  className="absolute -bottom-10 md:-bottom-20 left-0 w-32 z-[1]"/> 
                     </div>
-                    <div  data-aos="fade" className="w-screen h-[16rem] md:w-[18rem] md:h-[20rem] lg:w-[20rem] lg:h-[25rem] flex items-center justify-center relative overflow-hidden" style={{background:`linear-gradient(45deg,rgba(105,0,0,0.6),rgba(0,0,105,0.7)),url(${About})`,backgroundPosition:"center",backgroundSize:"cover"}}>
+                    <div  data-aos="fade" className="w-screen h-[16rem] md:w-[18rem] md:h-[20rem] lg:w-[20rem] lg:h-[25rem] flex items-center justify-center relative overflow-hidden" style={{background:`linear-gradient(45deg,rgba(105,0,0,0.6),rgba(0,0,105,0.7)),url(${Why})`,backgroundPosition:"center",backgroundSize:"cover"}}>
                         <p className="uppercase font-extrabold text-2xl sm:text-3xl text-white text-center">WHy Choose Us?</p>
                         <img src={LinePattern} alt="Line Pattern" className="absolute -top-20 -left-20 w-32 lg:w-40 rotate-[30deg]"/>
                     </div>

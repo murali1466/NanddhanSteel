@@ -22,7 +22,7 @@ function NavBar() {
             <div className={`flex items-start md:items-center justify-center flex-col md:flex-row uppercase text-sm font-extrabold gap-5 w-max h-screen bg-white px-10 md:px-0 ${!menu?"-left-60 md:left-0":"left-0"} md:bg-transparent transition-all duration-500 top-0 md:right-0 md:h-auto shadow-xl md:shadow-transparent shadow-[#00000034] text-[#1e4b8c] z-[6] absolute md:relative`}>
                 <Link className="px-5 md:px-0 py-1 text-center w-full md:w-auto hover:text-[#c0212e]" to="/#home" onClick={handleMenu}>Home</Link>
                 <Link className="px-5 md:px-0 py-1 text-center w-full md:w-auto hover:text-[#c0212e]" to="/#about" onClick={handleMenu}>Company</Link>
-                <Link className="px-5 md:px-0 py-1 text-center w-full md:w-auto hover:text-[#c0212e]" to="/products" onClick={handleMenu}>Products</Link>
+                <Link className="px-5 md:px-0 py-1 text-center w-full md:w-auto hover:text-[#c0212e]" to="/#products" onClick={handleMenu}>Products</Link>
                 <Link className="px-5 md:px-0 py-1 text-center w-full md:w-auto hover:text-[#c0212e]" to="/services" onClick={handleMenu}>Services</Link>
                 <Link className="px-5 md:px-0 py-1 text-center w-full md:w-auto hover:text-[#c0212e]" to="/#gallery" onClick={handleMenu}>Gallery</Link>
                 <Link className="px-5 md:px-0 py-1 text-center w-full md:w-auto hover:text-[#c0212e]" to="/#contact" onClick={handleMenu}>Contact US</Link>

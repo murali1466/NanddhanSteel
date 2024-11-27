@@ -5,7 +5,7 @@ import './index.css'
 import App from './App.jsx'
 import NavBar from "./Components/NavBar.jsx"
 import Footer from "./Components/Footer.jsx"
-import Products from "./Pages/Products.jsx"
+import Products from "./Pages/ProductsPage.jsx"
 import Services from "./Pages/Sevices.jsx"
 
 
