@@ -1,5 +1,5 @@
 import { useState} from "react";
-import Logo from "../assets/Logo.png";
+import Logo from "../assets/LogoName.jpg";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
@@ -14,7 +14,7 @@ function NavBar() {
     return (
         <div className="bg-[#fff] fixed z-[5] w-full h-max py-1 flex items-center justify-center md:justify-between font-[Nunito] px-5 md:px-10 shadow-md shadow-[#00000015]">
             <div>
-                <img src={Logo} alt="Logo" className="h-12 w-12"/>
+                <img src={Logo} alt="Logo" className="h-12 w-32 pl-0 md:-pl-5"/>
             </div>
             <div className="absolute z-[7] left-5 block md:hidden" onClick={handleMenu}>
                 <FontAwesomeIcon icon={menu?faTimes:faBars} className="text-[#1e4b8c]"/>
