@@ -12,7 +12,7 @@ function Footer() {
                 <Link className="text-center hover:text-[#c0212e]" to="/#home">Home</Link>
                 <Link className="text-center hover:text-[#c0212e]" to="/#about">Company</Link>
                 <Link className="text-center hover:text-[#c0212e]" to="/products">Products</Link>
-                <Link className="text-center hover:text-[#c0212e]" to="/services">Services</Link>
+                <Link className="text-center hover:text-[#c0212e]" to="/applications">Applications</Link>
                 <Link className="text-center hover:text-[#c0212e]" to="/#gallery">Gallery</Link>
                 <Link className="text-center hover:text-[#c0212e]" to="/#contact">Contact US</Link>
 
