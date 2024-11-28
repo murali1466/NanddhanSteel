@@ -90,7 +90,7 @@ function Gallery() {
             <div className="flex items-center justify-center flex-col py-10 pt-20 font-[poppins]">
                 <p className="font-[Nunito] text-[#1e4b8c] font-extrabold text-2xl md:text-3xl lg:text-4xl">Our Clients</p>
                 <div className="w-[90vw] sm:w-[70vw] lg:w-[60rem]">
-                    <Marquee className="py-5 overflow-y-hidden" gradientWidth={20} gradient gradientColor="white">
+                    <Marquee className="py-5 overflow-y-hidden" speed={80} gradientWidth={20} gradient gradientColor="white">
                         <img src={Himadri} className="w-20 mx-3" style={{filter:"drop-shadow(0px 0px 10px rgba(0,0,0,0.5))"}}/>
                         <img src={GramaSwarajya} className="w-20 rounded-3xl mx-3" style={{filter:"drop-shadow(0px 0px 10px rgba(0,0,0,0.5))"}}/>
                         <img src={KES} className="w-20 rounded-3xl mx-3" style={{filter:"drop-shadow(0px 0px 10px rgba(0,0,0,0.5))"}}/>
