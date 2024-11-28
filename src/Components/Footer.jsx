@@ -26,7 +26,7 @@ function Footer() {
                     <div className='flex items-start justify-center text-sm sm:text-base flex-col gap-2'>
                         <div className="text-center sm:text-left">
                         <FontAwesomeIcon icon={faMapLocation} className=' mr-3'/>
-                        <a href='https://maps.app.goo.gl/jRJvMaCVj99bm3nd6' target='_blank'>Plot No. 197/1, D-Block, Autonagar, Near Rajadhani Dharma Kaa, VSP - 12.</a>
+                        <a href='https://maps.app.goo.gl/jRJvMaCVj99bm3nd6' target='_blank'>Plot No. 197/1, D-Block, Autonagar, Near Rajadhani Dharma Kata, VSP - 12.</a>
                         </div>
                         <div className="text-center sm:text-left w-full">
                         <FontAwesomeIcon icon={faWhatsapp} className='text-green-800 mr-3'/>

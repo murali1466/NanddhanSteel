@@ -60,7 +60,7 @@ function Home() {
                     </Link>
                 </div>
             </div>
-            <a target="_blank" href="https://api.whatsapp.com/send?phone=8247092491" className="bg-emerald-600 flex items-center justify-center p-2 rounded-full h-10 w-10 fixed bottom-10 right-10 z-[10] animate-bounce">
+            <a target="_blank" href="https://api.whatsapp.com/send?phone=8247092491" className="bg-emerald-600 flex items-center justify-center p-2 rounded-full h-10 w-10 fixed bottom-10 right-5 sm:right-10 z-[10] animate-bounce">
                 <FontAwesomeIcon icon={faWhatsapp} className="text-2xl text-white"/>
             </a>
         </div>
