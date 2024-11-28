@@ -34,7 +34,7 @@ function Home() {
         >
             <div className="flex items-center md:items-end justify-center flex-col py-20 md:py-32">
                 <p data-aos="fade-left" className="font-black font-[Nunito] md:w-[30rem] lg:w-[45rem] text-center md:text-right text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white">
-                    <span className="text-[#403dff]">NANDDHAN STEEL</span><br /><span className="text-[#ff1313]">ROOFING INDUSTRIES</span>
+                    <span className="text-[#6b68ff]">NANDDHAN STEEL</span><br /><span className="text-[#ff1313]">ROOFING INDUSTRIES</span>
                 </p>
                 <p data-aos="fade-left" className="italic text-white font-extralight">
                     Discover the Quality . . .
