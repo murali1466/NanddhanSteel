@@ -7,6 +7,8 @@ import "aos/dist/aos.css"
 import DotPattern from "../assets/About/DotGrid.svg"
 import LinePattern from "../assets/About/LinePattern.svg"
 import Spectrum from "../assets/Products/colorSpectrum.jpg"
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
 
 function ProductsPage() {
     const productPage=useRef(null);
@@ -101,6 +103,9 @@ function ProductsPage() {
                     <img src={Spectrum} alt="RoofingAccessories" className="w-[90vw] sm:w-[30rem] lg:w-[40rem] my-5 rounded-3xl"/>
                 </div>
             </div>
+            <a target="_blank" href="https://api.whatsapp.com/send?phone=8247092491" className="bg-emerald-600 flex items-center justify-center p-2 rounded-full h-10 w-10 fixed bottom-10 right-10 z-[10] animate-bounce">
+                <FontAwesomeIcon icon={faWhatsapp} className="text-2xl text-white"/>
+            </a>
         </div>
     );
 }

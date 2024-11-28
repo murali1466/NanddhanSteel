@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import DotPattern from "../assets/About/DotGrid.svg"
@@ -81,6 +83,9 @@ function Applications() {
                     <Swiper />
                 </div>
             </div>
+            <a target="_blank" href="https://api.whatsapp.com/send?phone=8247092491" className="bg-emerald-600 flex items-center justify-center p-2 rounded-full h-10 w-10 fixed bottom-10 right-10 z-[10] animate-bounce">
+                <FontAwesomeIcon icon={faWhatsapp} className="text-2xl text-white"/>
+            </a>
         </div>
     );
 }
