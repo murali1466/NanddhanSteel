@@ -12,7 +12,7 @@ function Company() {
     const aboutSection = useRef(null);
 
     useEffect(() => {
-        if (location.hash === "#about  " && aboutSection.current) {
+        if (location.hash === "#about" && aboutSection.current) {
             aboutSection.current.scrollIntoView({ behavior: "smooth" });
             // console.log(aboutSection.current)
         }
