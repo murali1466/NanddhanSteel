@@ -12,9 +12,9 @@ function NavBar() {
     }
 
     return (
-        <div className="bg-[#fff] fixed z-[5] w-full h-max py-1 flex items-center justify-center md:justify-between font-[Nunito] px-5 md:px-10 shadow-md shadow-[#00000015]">
+        <div className="bg-[#fff] fixed z-[5] w-full h-max py-1 flex items-center justify-center md:justify-between font-[Nunito] px-5 lg:px-10 shadow-md shadow-[#00000015]">
             <div>
-                <img src={Logo} alt="Logo" className="h-12 w-32 pl-0 md:-pl-5"/>
+                <img src={Logo} alt="Logo" className="h-16 w-40 lg:w-52 pl-0 md:-pl-5"/>
             </div>
             <div className="absolute z-[7] left-5 block md:hidden" onClick={handleMenu}>
                 <FontAwesomeIcon icon={menu?faTimes:faBars} className="text-[#1e4b8c]"/>
@@ -25,7 +25,7 @@ function NavBar() {
                 <Link className="px-5 md:px-0 py-1 text-center w-full md:w-auto hover:text-[#c0212e]" to="/#products" onClick={handleMenu}>Products</Link>
                 <Link className="px-5 md:px-0 py-1 text-center w-full md:w-auto hover:text-[#c0212e]" to="/applications" onClick={handleMenu}>Applications</Link>
                 <Link className="px-5 md:px-0 py-1 text-center w-full md:w-auto hover:text-[#c0212e]" to="/#gallery" onClick={handleMenu}>Gallery</Link>
-                <Link className="px-5 md:px-0 py-1 text-center w-full md:w-auto hover:text-[#c0212e]" to="/#contact" onClick={handleMenu}>Contact US</Link>
+                <Link className="px-5 md:px-0 py-1 text-center w-full md:w-auto hover:text-[#c0212e]" to="/#contact" onClick={handleMenu}>Contact Us</Link>
             </div>
         </div>
     );

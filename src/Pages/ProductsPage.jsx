@@ -78,7 +78,7 @@ function ProductsPage() {
                     </div>
                     <div data-aos="fade-left" className="flex items-center justify-start bg-[#1e4b8c] p-1 rounded-3xl text-white gap-3 w-full">
                         <div className="flex items-center justify-center w-10 h-10 bg-[#cc2020] rounded-3xl font-semibold text-[#fff]"><p className="w-10 text-center">10</p></div>
-                        <div><p>Roofing Accessories</p></div>
+                        <div><p>UPVC Sheets</p></div>
                     </div>
                 </div>
             </div>

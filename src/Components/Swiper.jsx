@@ -17,6 +17,7 @@ import Image7 from "../assets/Products/Image7.png"
 import Image8 from "../assets/Products/Image8.png"
 import Image9 from "../assets/Products/Image9.png"
 import Image10 from "../assets/Products/Image10.png"
+import Image11 from "../assets/Products/Image11.png"
 
 export default function App() {
     const[items,setItems]=useState(3);
@@ -114,6 +115,14 @@ export default function App() {
                                 <p className="text-sm sm:text-base font-semibold">9</p>
                             </div>
                             <img src={Image9} alt="productImage" className="rounded-tl-3xl" />
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide className="mb-10">
+                        <div className="w-auto relative">
+                            <div className="absolute w-7 h-7 sm:w-10 sm:h-10 bg-[#c0212e] text-center flex items-center justify-center rounded-2xl sm:rounded-3xl text-white">
+                                <p className="text-sm sm:text-base font-semibold">10</p>
+                            </div>
+                            <img src={Image11} alt="productImage" className="rounded-tl-3xl" />
                         </div>
                     </SwiperSlide>
                 </Swiper>

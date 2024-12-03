@@ -4,6 +4,12 @@ import About from "../assets/About/Image1.jpg";
 import Why from "../assets/Gallery/Image2.jpg";
 import LinePattern from "../assets/About/LinePattern.svg";
 import DotPattern from "../assets/About/DotGrid.svg";
+import Marquee from "react-fast-marquee";
+import Tata from "../assets/Brands/Tata.png"
+import Jindal from "../assets/Brands/Jindal.png"
+import Navarang from "../assets/Brands/Navarang.webp"
+import JSW from "../assets/Brands/jsw.png"
+import Apollo from "../assets/Brands/Apollo.jpg"
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -42,6 +48,26 @@ function Company() {
                         <img src={DotPattern} alt="Dots pattern" className="absolute bottom-0 w-32"/> 
                         <img src={About} alt="Side Image" className="rounded-tr-3xl rounded-bl-3xl border-r-4 md:border-r-8 border-[#1e4b8c]"/>
                     </div>
+                </div>
+            </div>
+            <div className="flex items-center justify-center flex-col py-10 pt-20 font-[poppins]">
+                <p className="font-[Nunito] text-[#1e4b8c] font-extrabold text-2xl md:text-3xl lg:text-4xl">Our Brands</p>
+                <div className="w-[90vw] sm:w-[70vw] lg:w-[60rem]">
+                    <Marquee className="py-5 overflow-y-hidden scale-90 md:scale-100" speed={80} gradientWidth={20} autoFill={true} lopp={0} gradient gradientColor="white">
+                        <div className="bg-[#1e4b8c] p-0.5 px-1 rounded-lg h-max w-max mx-3" style={{filter:"drop-shadow(0px 0px 10px rgba(0,0,0,0.5))"}}>
+                            <img src={Tata} className="h-10 md:h-16"/>
+                        </div>
+                        <div className="bg-[#1e4b8c] p-0.5 px-1 rounded-lg h-max w-max mx-3" style={{filter:"drop-shadow(0px 0px 10px rgba(0,0,0,0.5))"}}>
+                            <img src={Jindal} className="h-10 md:h-16 rounded-lg"/>
+                        </div>
+                        <div className="bg-[#fff] p-0.5 px-1 rounded-lg h-max w-max mx-3" style={{filter:"drop-shadow(0px 0px 10px rgba(0,0,0,0.5))"}}>
+                            <img src={Navarang} className="h-10 md:h-16 rounded-lg"/>
+                        </div>
+                        <div className="bg-[#fff] p-0.5 rounded-lg h-max w-max mx-3" style={{filter:"drop-shadow(0px 0px 10px rgba(0,0,0,0.5))"}}>
+                            <img src={JSW} className="h-10 md:h-16 rounded-lg"/>
+                        </div>
+                        <img src={Apollo} className="h-10 md:h-16 rounded-lg mx-3" style={{filter:"drop-shadow(0px 0px 10px rgba(0,0,0,0.5))"}}/>
+                    </Marquee>
                 </div>
             </div>
             <div className="relative full bg-[#ffffff] font-[poppins] flex items-center justify-center w-full pb-10">
