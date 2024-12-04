@@ -87,7 +87,7 @@ function Company() {
                 </div>
             </div>
             <div className="flex w-full items-center justify-center bg-[#1e4b8c]">
-                <video src={Video} autoPlay={true} loop={true} muted={true} controls type="video/mp4" className="w-[80%]"></video>            
+                <video src={Video} autoPlay={true} loop={true} muted={true} controls type="video/mp4" className="w-[95%] sm:w-[90%] md:w-[80%]"></video>            
             </div>
             <div className="flex items-center justify-center flex-col py-10 pt-20 font-[poppins]">
                 <p className="font-[Nunito] text-[#1e4b8c] font-extrabold text-2xl md:text-3xl lg:text-4xl">
