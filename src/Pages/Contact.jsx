@@ -51,7 +51,7 @@ function Contact() {
             .catch((err) => {
                 console.log(err);
             });
-        console.log(details);
+        // console.log(details);
     };
 
     return (
@@ -197,7 +197,6 @@ function Contact() {
                     className="w-[90vw] h-60 sm:w-[80vw] sm:h-56 md:h-72 md:w-[26rem] lg:h-80 lg:w-[35rem]"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3217.005938705973!2d83.18555227436481!3d17.696692583244193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a39693a08815c7b%3A0x1cbf2c89d085803b!2sNanddhan%20Steel%20Roofing%20Industries!5e1!3m2!1sen!2sin!4v1732620132589!5m2!1sen!2sin"
                     style={{ border: 0 }}
-                    allowfullscreen=""
                     loading="eager"
                 ></iframe>
             </div>

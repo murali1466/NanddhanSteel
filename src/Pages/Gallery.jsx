@@ -1,19 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import Image1 from "../assets/Gallery/Image1.jpg";
-import Image2 from "../assets/Gallery/Image2.jpg";
-import Image3 from "../assets/Gallery/Image3.jpg";
-import Image4 from "../assets/Gallery/Image4.jpg";
-import Image5 from "../assets/Gallery/Image6.jpg";
-import Image6 from "../assets/Gallery/Image7.jpg";
-import Image7 from "../assets/Gallery/Image8.jpg";
-import Image8 from "../assets/Gallery/Image9.jpg";
+import axios from "axios";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Marquee from "react-fast-marquee";
-import DasDairy from "../assets/Clients/DAS Dairy.svg"
 import GramaSwarajya from "../assets/Clients/gramaSwarajya.jpg"
 import Himadri from "../assets/Clients/Himadri.svg"
 import KES from "../assets/Clients/KES.avif"
@@ -26,6 +18,7 @@ import Varma from "../assets/Clients/Varma.png"
 function Gallery() {
     const gallerySection = useRef(null);
     const location = useLocation();
+    const [data, setData] = useState({});
     const [enable, setEnable] = useState(false);
     const [isImage, setIsImage] = useState("");
     
@@ -48,6 +41,11 @@ function Gallery() {
         AOS.init({duration:1000});
         AOS.refresh();
     })
+    useEffect(()=>{
+        axios.get("https://api.cosmicjs.com/v3/buckets/nanddhan-steel-production/objects/675bcb8388767cdc34b9b7e2?pretty=true&read_key=CflLIS30RCirUt744kUC5wCkjEzLDuZFcg85LvbVqAYyMs2jJV&depth=1&props=slug,title,metadata,type")
+        .then((res)=>{setData(res.data.object.metadata);})
+        .catch(err=>{window.alert(err)});
+    },[])
 
     return (
         <>
@@ -64,19 +62,19 @@ function Gallery() {
                 </p>
                 <div data-aos="fade-up" className="flex items-center justify-center flex-row md:flex-col gap-3 my-5">
                     <div className="gap-3 flex items-center justify-center flex-col md:flex-row">
-                        <img src={Image3} alt="Image3" className="h-[10rem] w-[40vw] md:w-[10rem] md:h-[10rem] lg:w-[14rem] lg:h-[15rem] object-cover object-center rounded-xl" onClick={()=>handleShowImage(Image3)} style={{boxShadow:"0px 0px 10px rgba(0,0,0,0.3)"}}/>
-                        <img src={Image2} alt="Image2" className="h-[14rem] w-[40vw] md:w-[14rem] md:h-[10rem] lg:w-[18rem] lg:h-[15rem] object-cover object-center rounded-xl" onClick={()=>handleShowImage(Image2)} style={{boxShadow:"0px 0px 10px rgba(0,0,0,0.3)"}}/>
-                        <img src={Image1} alt="Image1" className="h-[21rem] w-[40vw] md:w-[21rem] md:h-[10rem] lg:w-[25rem] lg:h-[15rem] object-cover object-center rounded-xl" onClick={()=>handleShowImage(Image1)} style={{boxShadow:"0px 0px 10px rgba(0,0,0,0.3)"}}/>
+                        <img src={data["image_3"]} alt="Image3" className="h-[10rem] w-[40vw] md:w-[10rem] md:h-[10rem] lg:w-[14rem] lg:h-[15rem] object-cover object-center rounded-xl" onClick={()=>handleShowImage(Image3)} style={{boxShadow:"0px 0px 10px rgba(0,0,0,0.3)"}}/>
+                        <img src={data["image_2"]} alt="Image2" className="h-[14rem] w-[40vw] md:w-[14rem] md:h-[10rem] lg:w-[18rem] lg:h-[15rem] object-cover object-center rounded-xl" onClick={()=>handleShowImage(Image2)} style={{boxShadow:"0px 0px 10px rgba(0,0,0,0.3)"}}/>
+                        <img src={data["image_1"]} alt="Image1" className="h-[21rem] w-[40vw] md:w-[21rem] md:h-[10rem] lg:w-[25rem] lg:h-[15rem] object-cover object-center rounded-xl" onClick={()=>handleShowImage(Image1)} style={{boxShadow:"0px 0px 10px rgba(0,0,0,0.3)"}}/>
                     </div>
                     <div className="gap-3 flex items-center justify-center flex-col md:flex-row">
-                        <img src={Image4} alt="Image4" className="h-[14rem] w-[40vw] md:w-[14rem] md:h-[10rem] lg:w-[18rem] lg:h-[15rem] object-cover object-center rounded-xl" onClick={()=>handleShowImage(Image4)} style={{boxShadow:"0px 0px 10px rgba(0,0,0,0.3)"}}/>
-                        <img src={Image5} alt="Image5" className="h-[15rem] w-[40vw] md:w-[15rem] md:h-[10rem] lg:w-[19rem] lg:h-[15rem] object-cover object-center rounded-xl" onClick={()=>handleShowImage(Image5)} style={{boxShadow:"0px 0px 10px rgba(0,0,0,0.3)"}}/>
-                        <img src={Image6} alt="Image6" className="h-[16rem] w-[40vw] md:w-[16rem] md:h-[10rem] lg:w-[20rem] lg:h-[15rem] object-cover object-center rounded-xl" onClick={()=>handleShowImage(Image6)} style={{boxShadow:"0px 0px 10px rgba(0,0,0,0.3)"}}/>
+                        <img src={data["image_4"]} alt="Image4" className="h-[14rem] w-[40vw] md:w-[14rem] md:h-[10rem] lg:w-[18rem] lg:h-[15rem] object-cover object-center rounded-xl" onClick={()=>handleShowImage(Image4)} style={{boxShadow:"0px 0px 10px rgba(0,0,0,0.3)"}}/>
+                        <img src={data["image_5"]} alt="Image5" className="h-[15rem] w-[40vw] md:w-[15rem] md:h-[10rem] lg:w-[19rem] lg:h-[15rem] object-cover object-center rounded-xl" onClick={()=>handleShowImage(Image5)} style={{boxShadow:"0px 0px 10px rgba(0,0,0,0.3)"}}/>
+                        <img src={data["image_6"]} alt="Image6" className="h-[16rem] w-[40vw] md:w-[16rem] md:h-[10rem] lg:w-[20rem] lg:h-[15rem] object-cover object-center rounded-xl" onClick={()=>handleShowImage(Image6)} style={{boxShadow:"0px 0px 10px rgba(0,0,0,0.3)"}}/>
                     </div>
                     <div className="gap-3 md:flex items-center justify-center flex-col md:flex-row hidden">
-                        <img src={Image8} alt="Image8" className="md:h-[10rem] md:w-[10rem] lg:w-[14rem] lg:h-[15rem] object-cover object-center rounded-xl" onClick={()=>handleShowImage(Image8)} style={{boxShadow:"0px 0px 10px rgba(0,0,0,0.3)"}}/>
-                        <img src={Image3} alt="Image3" className="md:h-[10rem] md:w-[21rem] lg:w-[25rem] lg:h-[15rem] object-cover object-center rounded-xl" onClick={()=>handleShowImage(Image3)} style={{boxShadow:"0px 0px 10px rgba(0,0,0,0.3)"}}/>
-                        <img src={Image7} alt="Image7" className="md:h-[10rem] md:w-[14rem] lg:w-[18rem] lg:h-[15rem] object-cover object-center rounded-xl" onClick={()=>handleShowImage(Image7)} style={{boxShadow:"0px 0px 10px rgba(0,0,0,0.3)"}}/>
+                        <img src={data["image_8"]} alt="Image8" className="md:h-[10rem] md:w-[10rem] lg:w-[14rem] lg:h-[15rem] object-cover object-center rounded-xl" onClick={()=>handleShowImage(Image8)} style={{boxShadow:"0px 0px 10px rgba(0,0,0,0.3)"}}/>
+                        <img src={data["image_3"]} alt="Image3" className="md:h-[10rem] md:w-[21rem] lg:w-[25rem] lg:h-[15rem] object-cover object-center rounded-xl" onClick={()=>handleShowImage(Image3)} style={{boxShadow:"0px 0px 10px rgba(0,0,0,0.3)"}}/>
+                        <img src={data["image_7"]} alt="Image7" className="md:h-[10rem] md:w-[14rem] lg:w-[18rem] lg:h-[15rem] object-cover object-center rounded-xl" onClick={()=>handleShowImage(Image7)} style={{boxShadow:"0px 0px 10px rgba(0,0,0,0.3)"}}/>
                     </div>
                 </div>
                 {

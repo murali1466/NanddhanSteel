@@ -1,8 +1,9 @@
-import {useEffect, useRef} from "react";
+import {useEffect, useRef, useState} from "react";
 import { useLocation, Link } from "react-router-dom";
 import Card from "../Components/ProductsCard";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import axios from "axios";
 import Image1 from "../assets/Products/Image1.png"
 import Image5 from "../assets/Products/Image5.png"
 import Image7 from "../assets/Products/Image7.png"
@@ -15,6 +16,7 @@ import Image6 from "../assets/Products/Image6.png"
 function Products() {
     const productSection=useRef(null)
     const location = useLocation();
+    const [productsData, setData] = useState([]);
 
     useEffect(()=>{
         if(location.hash==="#products" && productSection.current)
@@ -22,6 +24,12 @@ function Products() {
             productSection.current.scrollIntoView({behavior:"smooth"});
         }
     },[location]);
+
+    useEffect(()=>{
+        axios.get("https://api.cosmicjs.com/v3/buckets/nanddhan-steel-production/objects?pretty=true&query=%7B%22type%22:%22products%22%7D&limit=10&skip=0&read_key=CflLIS30RCirUt744kUC5wCkjEzLDuZFcg85LvbVqAYyMs2jJV&depth=1&props=slug,title,metadata,type")
+        .then((res)=>{setData(res.data.objects);console.log(productsData)})
+        .catch((err)=>{window.alert(err)});
+    },[])
 
     return (
         <>
@@ -51,7 +59,10 @@ function Products() {
                     <div className="w-56 sm:w-64 flex items-center justify-center flex-col bg-[#fff] border border-b-4 shadow-lg shadow-[#0000001e] border-[#1e4b8c] rounded-lg px-2 py-4 ">
                         <img src={Image4} alt="productImage" className="h-36 rounded-md shadow-md shadow-[#00000023]"/>
                         <div className="text-center">
-                            <p className="text-base sm:text-lg font-semibold my-3">Ventilators - Turbo - Ridge</p>
+                            <p className="text-base sm:text-lg font-semibold my-3">
+                                Ventilators - Turbo - Ridge
+                                {/* {productsData[0].title} */}
+                            </p>
                             <p className="font-extralight text-sm"> Wind-driven systems for optimal air circulation.</p>
                         </div>
                     </div>
