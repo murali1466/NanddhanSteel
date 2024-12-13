@@ -16,7 +16,6 @@ import Image6 from "../assets/Products/Image6.png"
 function Products() {
     const productSection=useRef(null)
     const location = useLocation();
-    const [productsData, setData] = useState([]);
 
     useEffect(()=>{
         if(location.hash==="#products" && productSection.current)
@@ -24,13 +23,6 @@ function Products() {
             productSection.current.scrollIntoView({behavior:"smooth"});
         }
     },[location]);
-
-    useEffect(()=>{
-        axios.get("https://api.cosmicjs.com/v3/buckets/nanddhan-steel-production/objects?pretty=true&query=%7B%22type%22:%22products%22%7D&limit=10&skip=0&read_key=CflLIS30RCirUt744kUC5wCkjEzLDuZFcg85LvbVqAYyMs2jJV&depth=1&props=slug,title,metadata,type")
-        .then((res)=>{setData(res.data.objects);console.log(productsData)})
-        .catch((err)=>{window.alert(err)});
-    },[])
-
     return (
         <>
             <div ref={productSection} className="font-[poppins] px-5 md:px-7 lg:px-10 py-10 pt-20 bg-[#f5f5f5]">

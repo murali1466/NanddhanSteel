@@ -13,7 +13,7 @@ function Footer() {
     useEffect(()=>{
         axios.get("https://api.cosmicjs.com/v3/buckets/nanddhan-steel-production/objects/675bccea88767cdc34b9b7e8?pretty=true&read_key=CflLIS30RCirUt744kUC5wCkjEzLDuZFcg85LvbVqAYyMs2jJV&depth=1&props=slug,title,metadata,type")
         .then((res)=>{setNumberData(res.data.object.metadata)})
-        .catch((err)=>{window.alert(err)});
+        .catch((err)=>{console.log(err)});
     },[]);
 
     return (

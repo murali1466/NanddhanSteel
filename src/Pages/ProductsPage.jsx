@@ -1,4 +1,5 @@
-import {useEffect, useRef} from "react";
+import {useEffect, useRef,useState} from "react";
+import axios from "axios";
 import { useLocation } from "react-router-dom";
 import Roofs from "../assets/Products/Image2.png"
 import Swiper from "../Components/Swiper"
@@ -11,6 +12,7 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
 
 function ProductsPage() {
+    const [productsData, setData] = useState([]);
     const productPage=useRef(null);
     const location=useLocation();
 
@@ -24,6 +26,18 @@ function ProductsPage() {
             productPage.current.scrollIntoView({behavior:"smooth"})
         }
     },[location]);
+    useEffect(()=>{
+        if(location.hash==="#products" && productSection.current)
+        {
+            productSection.current.scrollIntoView({behavior:"smooth"});
+        }
+    },[location]);
+
+    useEffect(()=>{
+        axios.get("https://api.cosmicjs.com/v3/buckets/nanddhan-steel-production/objects?pretty=true&query=%7B%22type%22:%22products%22%7D&limit=10&skip=0&read_key=CflLIS30RCirUt744kUC5wCkjEzLDuZFcg85LvbVqAYyMs2jJV&depth=1&props=slug,title,metadata,type")
+        .then((res)=>{setData(res.data.objects);})
+        .catch((err)=>{console.log(err)});
+    },[])
 
     return (
         <div ref={productPage} className="flex overflow-hidden items-center justify-center flex-col font-[poppins] pt-20">
@@ -38,10 +52,10 @@ function ProductsPage() {
                     <img src={DotPattern} alt="DotGrid" className="absolute" />
                 </div>
                 <div className="flex items-start justify-center flex-col gap-2">
-                    <div data-aos="fade-right" className="flex items-center justify-start bg-[#1e4b8c] p-1 rounded-3xl text-white gap-3 w-full">
-                        <div className="flex items-center justify-center w-10 h-10 bg-[#cc2020] rounded-3xl font-semibold text-[#fff]"><p className="w-10 text-center">1</p></div>
-                        <div><p>Colour Coated Metal Roofing Sheets</p></div>
-                    </div>
+                   {productsData.map((product,index)=>( <div data-aos="fade-right" className="flex items-center justify-start bg-[#1e4b8c] p-1 rounded-3xl text-white gap-3 w-full" key={index}>
+                        <div className="flex items-center justify-center w-10 h-10 bg-[#cc2020] rounded-3xl font-semibold text-[#fff]"><p className="w-10 text-center">{index + 1}</p></div>
+                        <div><p>{product.title}</p></div>
+                    </div>))}
                     <div data-aos="fade-right" className="flex items-center justify-start bg-[#1e4b8c] p-1 rounded-3xl text-white gap-3 w-full">
                         <div className="flex items-center justify-center w-10 h-10 bg-[#cc2020] rounded-3xl font-semibold text-[#fff]"><p className="w-10 text-center">2</p></div>
                         <div><p>Fastners</p></div>
